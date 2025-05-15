@@ -38,6 +38,9 @@ Setup Steps
  2.Build Docker image:
     docker build -t drugdispensing-app .
 ![Screenshot 2025-05-15 101859](https://github.com/user-attachments/assets/4c6a572b-358d-476a-b165-099b32374b20)
+on Docker Desktop you should see your image
+![image](https://github.com/user-attachments/assets/329f86c5-216d-4f03-bbad-8d0f03965101)
+
 
  Part 2: Create Deployment & Service
 1.Create drugdispensing-deployment.yaml with app=drugdispensing.
@@ -75,6 +78,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 Apply:
 kubectl get pods -n ingress-nginx
 ![Screenshot 2025-05-15 125806](https://github.com/user-attachments/assets/a6ae9260-313d-4e32-b700-e87573e99682)
+On Docker Desktop you should be able to see your containers running
+![image](https://github.com/user-attachments/assets/ff505764-7aea-4e00-8a50-3330aa6685a4)
 3.Update your /etc/hosts or C:\Windows\System32\drivers\etc\hosts:
 127.0.0.1 drugdispensing.local
 ![Screenshot 2025-05-15 125816](https://github.com/user-attachments/assets/c0f7f7c1-34b3-4aa2-9071-e4b3b1c08c0c)
