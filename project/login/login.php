@@ -1,6 +1,6 @@
 <?php
+session_start(); 
 require_once('../header.php');
-
 require_once('../credentials.php');
 
 $mysqli = new mysqli($database_host, $database_user, $database_password, $database_name);
@@ -8,8 +8,6 @@ $mysqli = new mysqli($database_host, $database_user, $database_password, $databa
 if ($mysqli->connect_error) {
 	die("Connection failed: " . $mysqli->connect_error);
 }
-
-session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$email = $_POST['email'];
